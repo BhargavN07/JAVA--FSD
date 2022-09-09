@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Score Board</title>
+	
+</head>
+<body>
+
+	<h3>Top Scores Of All Time</h3>
+	
+	<div align="center" >
+		
+		
+		<table border=1 cellpadding=20 >
+			<tr>
+				<th>Name</th>
+				<th>Score</th>
+			</tr>
+			<tr th:each="score : ${sList}">
+				<td th:text="${score.username}"></td>
+				<td th:text="${score.email}"></td>
+				<td th:text="${score.totalCorrect}"></td>
+			</tr>
+		</table>
+		</div>
+	
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Quiz Page</title>
+</head>
+<body>
+
+	
+	
+	
+		<h1 >Only Select The Correct Answers</h1>
+		
+		<form action="submit" method="POST" th:object=${qForm}>
+			<div  th:each="ques, i: ${qForm.questions}">
+				<p class="title" th:text="${ques.question}"></p>
+				
+				
+					<input type="radio" th:name="|questions[${i.index}].chose|" th:value="1" th:text="${ques.optionA}"/>
+					<br><br>
+				
+				
+				
+					<input type="radio" th:name="|questions[${i.index}].chose|" th:value="2" th:text="${ques.optionB}"/>
+					<br><br>
+				
+				
+				
+					<input type="radio" th:name="|questions[${i.index}].chose|" th:value="3" th:text="${ques.optionC}"/>
+					<br><br>
+					
+					<input type="radio" th:name="|questions[${i.index}].chose|" th:value="4" th:text="${ques.optionD}"/>
+					<br><br>
+			
+				
+				<input type="hidden" th:name="|questions[${i.index}].id|" th:value="${ques.id}" />
+				<input type="hidden" th:name="|questions[${i.index}].question|" th:value="${ques.question}" />
+				<input type="hidden" th:name="|questions[${i.index}].ans|" th:value="${ques.ans}" />
+			</div>
+			
+			<button type="submit" >Submit Answer</button>
+		</form>
+	
+
+
+</body>
+</html>

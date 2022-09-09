@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+
+	<title>Result Page</title>
+</head>
+<body>
+
+
+	
+
+			
+			<h3 >Your Score</h3>
+			
+			
+				<p>Participant name:</p>
+				<p th:if="${result}" th:text="${result.username}"></p>
+			
+				<p>Participant email:</p>
+				<p th:if="${result}" th:text="${result.email}"></p>
+			
+			
+				<p>Total correct answer:</p>
+				<p th:if="${result}" th:text="${result.totalCorrect}"></p>
+			
+			
+			
+				<p>Total false answer:</p>
+				<p th:if="${result}" th:text="5 - ${result.totalCorrect}"></p>
+			
+			
+			
+				<button type="button" th:onclick="window.location.href='/score'"
+					class="btn btn-outline-warning mx-auto">View Score Board</button>
+				<button type="button" th:onclick="window.location.href='/'"
+					class="btn btn-outline-warning mx-auto">Back to Homepage</button>
+			
+	
+
+</body>
+</html>
