@@ -1,0 +1,96 @@
+<html>
+<head>
+<title>Student Registration Form</title>
+<link rel="stylesheet" href="new.css">
+</head>
+ 
+<body>
+<h3>REGISTRATION FORM</h3>
+
+ 
+<table align="center" cellpadding = "10">
+ 
+<!----- First Name ---------------------------------------------------------->
+<tr>
+<td>NAME</td>
+<td><input type="text" name="First_Name" maxlength="30"/>
+(max 30 characters a-z and A-Z)
+</td>
+</tr>
+ 
+<!----- Email Id ---------------------------------------------------------->
+<tr>
+<td>EMAIL ID</td>
+<td><input type="text" name="Email_Id" maxlength="100" /></td>
+</tr>
+ 
+<!----- Mobile Number ---------------------------------------------------------->
+<tr>
+<td>MOBILE NUMBER</td>
+<td>
+<input type="text" name="Mobile_Number" maxlength="10" />
+(10 digit number)
+</td>
+</tr>
+ 
+<!----- Gender ----------------------------------------------------------->
+<tr>
+<td>GENDER</td>
+<td>
+    <input type="radio" name="Gender" value="Male" /> Male 
+    <input type="radio" name="Gender" value="Female" /> Female 
+    <input type="radio" name="Gender" value="Other" /> Other 
+</td>
+</tr>
+
+ 
+<!----- Hobbies ---------------------------------------------------------->
+ 
+<tr>
+<td>HOBBIES <br /><br /><br /></td>
+ 
+<td>
+Drawing
+<input type="checkbox" name="Hobby_Drawing" value="Drawing" />
+Singing
+<input type="checkbox" name="Hobby_Singing" value="Singing" />
+Dancing
+<input type="checkbox" name="Hobby_Dancing" value="Dancing" />
+Sketching
+<input type="checkbox" name="Hobby_Cooking" value="Cooking" />
+<br />
+Others
+<input type="checkbox" name="Hobby_Other" value="Other">
+<input type="text" name="Other_Hobby" maxlength="30" />
+</td>
+</tr>
+ 
+
+<!----- Course ---------------------------------------------------------->
+<tr>
+<td>COURSES<br />APPLIED FOR</td>
+<td>
+BCA
+<input type="radio" name="Course_BCA" value="BCA">
+B.Com
+<input type="radio" name="Course_BCom" value="B.Com">
+B.Sc
+<input type="radio" name="Course_BSc" value="B.Sc">
+B.A
+<input type="radio" name="Course_BA" value="B.A">
+</td>
+</tr>
+ 
+<!----- Submit and Reset ------------------------------------------------->
+<tr>
+<td colspan="2" align="center">
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+</td>
+</tr>
+</table>
+ 
+</form>
+ 
+</body>
+</html>
